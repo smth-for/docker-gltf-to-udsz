@@ -1,5 +1,5 @@
 # Since USD takes so long to build, we separate it into it's own container
-FROM leon/usd:latest
+FROM smthfor/usd:latest
 
 WORKDIR /usr/src/ufg
 

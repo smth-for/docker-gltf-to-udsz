@@ -3,6 +3,11 @@
 It uses this repo under the hood.
 https://github.com/google/usd_from_gltf#compatibility
 
+# Docker
+The ready image is here **smthfor/gltf-to-usdz**
+
+The USD image is here **smthfor/usd**
+
 # Run
 Using helper script that will output a usdz file with same name as input
 ```
@@ -13,13 +18,13 @@ Using raw docker command
 ```
 docker run \
   --rm \
-  -v $(PWD):/usr/app \
-  leon/usd-from-gltf:latest \
+  -v $PWD:/usr/app \
+  smthfor/gltf-to-usdz:latest \
   inputfile.glb \
   outputfile.usdz
 
 # or on one line
-docker run -it --rm -v $(PWD):/usr/app leon/usd-from-gltf:latest inputfile.glb outputfile.usdz
+docker run -it --rm -v $PWD:/usr/app smthfor/gltf-to-usdz:latest inputfile.glb outputfile.usdz
 ```
 
 # Build
